@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">shop</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="unit_list">
+        <item>kg</item>
+        <item>half kg</item>
+        <item>dz</item>
+        <item>half dz</item>
+        <item>carton</item>
+        <item>bag</item>
+        <item>piece</item>
+
+    </string-array>
+    <string-array name="payment_status_array">
+        <item>Paid</item>
+        <item>Partial</item>
+        <item>Unpaid</item>
+    </string-array>
+    <string name="payment_status_prompt">-- Select Payment Status --</string>
+
+</resources>

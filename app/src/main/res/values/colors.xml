@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#660678</color>
+    <color name="backgroundColor">#F5F5F5</color> <!-- Light grey -->
+    <color name="buttonBlue">#2196F3</color>
+    <color name="buttonGreen">#4CAF50</color>
+    <color name="textDark">#212121</color>
+    <color name="labelGrey">#757575</color>
+    <color name="nav_background">#E3F2FD</color>
+    <color name="nav_item_selected">#EDE7F6</color>
+    <color name="nav_icon_color">#333333</color>
+    <color name="teal_700">#00796B</color>
+    <color name="purple_700">#512DA8</color>
+    <color name="purple_500">#9C27B0</color>
+
+
+</resources>

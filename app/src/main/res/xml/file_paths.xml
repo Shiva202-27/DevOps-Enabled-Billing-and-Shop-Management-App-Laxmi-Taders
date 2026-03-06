@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- For saving bills in external files -->
+    <external-files-path
+        name="bills"
+        path="bills/" />
+
+    <!-- For exported Excel/PDF reports -->
+    <external-files-path
+        name="exports"
+        path="exports/" />
+
+    <!-- If you need access to entire external files dir -->
+    <external-path
+        name="external_files"
+        path="." />
+    <external-files-path name="external_files" path="." />
+
+
+    <!-- For internal app files -->
+    <files-path
+        name="internal_files"
+        path="." />
+</paths>

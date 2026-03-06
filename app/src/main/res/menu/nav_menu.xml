@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_add_item"
+            android:title="Add Item"
+            android:icon="@drawable/ic_add" />
+
+        <item
+            android:id="@+id/nav_edit_item"
+            android:title="Edit Items"
+            android:icon="@drawable/ic_edit" />
+
+        <item
+            android:id="@+id/nav_manage_products"
+            android:title="Manage Products"
+            android:icon="@drawable/ic_inventory" />
+    </group>
+
+    <item android:title="Reports">
+        <menu>
+            <item
+                android:id="@+id/nav_view_history"
+                android:title="Bill History"
+                android:icon="@drawable/ic_history" />
+
+            <item
+                android:id="@+id/nav_sales_summary"
+                android:title="Sales Summary"
+                android:icon="@drawable/ic_summary" />
+        </menu>
+    </item>
+
+</menu>

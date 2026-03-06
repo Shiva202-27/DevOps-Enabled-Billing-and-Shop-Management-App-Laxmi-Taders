@@ -1,0 +1,104 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- AppBarLayout and Toolbar here -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#D0B3F2"
+            android:title="Laxmi Traders"
+            android:titleTextColor="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main content container -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9f9f9"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/textTotalDue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Due: ₹0.00"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#D32F2F"/><!-- A red-ish color -->
+
+
+        <AutoCompleteTextView
+            android:id="@+id/editCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter Customer Name"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:importantForAutofill="yes" />
+
+        <EditText
+            android:id="@+id/editPaymentAmount"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="numberDecimal"
+            android:hint="Payment Amount"
+            android:layout_marginTop="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/btnSubmitPayment"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Submit Payment"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-bold"
+            android:elevation="4dp" />
+
+        <TextView
+            android:id="@+id/textUpdatedDue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Due: ₹0.00"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="36dp"
+            android:gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCustomerDues"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="24dp"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item> <!-- Spinner background shape -->
+                <shape android:shape="rectangle">
+                    <solid android:color="#80CBC4" />
+                    <corners android:radius="4dp" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_keyboard_arrow_down_24dp"
+                android:gravity="center_vertical|end"
+                android:right="8dp" />
+        </layer-list>
+    </item>
+</selector>

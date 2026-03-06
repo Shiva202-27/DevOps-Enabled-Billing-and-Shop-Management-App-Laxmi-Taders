@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <!-- 🔵 Toolbar at the top -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#D0B3F2"
+            android:title="Laxmi Traders"
+            android:titleTextColor="@android:color/white"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- 🔵 Bill Switch Buttons -->
+
+
+    <!-- 🔵 Main UI -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="#F5F5F5">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 🧑 Customer Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_last_bill"
+                android:elevation="2dp"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+
+                <Button
+                    android:id="@+id/btnBill1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bill 1" />
+
+                <Button
+                    android:id="@+id/btnBill2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bill 2" />
+
+                <Button
+                    android:id="@+id/btnBill3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bill 3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/textBillNumber"
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="12dp"
+                    android:text="Bill No: "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnViewHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📜 View Bill History"
+                    android:paddingHorizontal="12dp"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <!-- Customer Info + Previous Due Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/bg_card"
+                android:layout_marginBottom="12dp"
+                android:elevation="2dp">
+
+                <!-- Customer Info Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:text="👤 Customer Info"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textPreviousDue"
+                        android:text="Previous Due: ₹0.00"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#D32F2F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <AutoCompleteTextView
+                android:id="@+id/editCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bg"
+                android:hint="Customer Name"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/editCustomerPhone"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:background="@drawable/edittext_bg"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp" />
+
+
+            <!-- 🛒 Product Section -->
+            <!-- Product Info Label -->
+            <TextView
+                android:text="🛍️ Product Info"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Row 1: Search Product + Quantity -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoProductSearch"
+                    android:hint="🔍 Product"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_marginEnd="6dp"/>
+
+                <EditText
+                    android:id="@+id/editQty"
+                    android:hint="Qty"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bg"/>
+            </LinearLayout>
+
+            <!-- Row 2: Unit + Rate -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textUnit"
+                    android:text="Unit"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginEnd="6dp"/>
+
+                <EditText
+                    android:id="@+id/editRate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Rate ₹"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp" />
+            </LinearLayout>
+            <!-- Parent vertical container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- First row: Payment Received + Add to Cart -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical">
+
+                    <Spinner
+                        android:id="@+id/spinnerPaymentStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:spinnerMode="dropdown"
+                        android:prompt="@string/payment_status_prompt"
+                        />
+
+                    <Button
+                        android:id="@+id/btnAddToCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#2196F3"
+                        android:padding="12dp"
+                        android:text="➕ Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+
+                <!-- Second row: Payment + Save Final Bill -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Payment: ₹"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:textColor="#333333" />
+
+                    <EditText
+                        android:id="@+id/editPayment"
+                        android:inputType="numberDecimal"
+                        android:hint="0.00000"
+                        android:textSize="16sp"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ems="6"
+                        android:gravity="start|center_vertical"
+                        android:padding="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:textColor="#000000" />
+
+                    <Button
+                        android:id="@+id/btnSavePurchase"
+                        android:text="💾 Save Final Bill"
+                        android:textAllCaps="false"
+                        android:backgroundTint="#4CAF50"
+                        android:textColor="#FFFFFF"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- 🧾 Cart Summary -->
+            <TextView
+                android:id="@+id/textCartSummary"
+                android:text="🧺 Cart: (0 items)"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listCart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="true"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="vertical"
+                android:layout_marginBottom="10dp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/successAnimation"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/success_check"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
